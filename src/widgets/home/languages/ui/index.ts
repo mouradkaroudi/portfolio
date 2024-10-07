@@ -1,0 +1,1 @@
+export { List as LanguagesList } from './list';
