@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
+import { ThemeProvider } from "@/features/toggle-theme";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,10 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="bg-stone-950">
-        {children}
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en" className={inter.className}>
+        <body className="bg-white dark:bg-stone-950">
+          {children}
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }

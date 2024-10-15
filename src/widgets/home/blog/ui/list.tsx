@@ -5,7 +5,7 @@ export const List = () => {
         <>
             <div className="flex justify-between mb-8">
                 <h2 className="font-semibold text-xl leading-6">Blog</h2>
-                <a href="#" className="flex items-center gap-2 h-7 px-3 border border-white border-opacity-[0.12] rounded-lg text-stone-400">
+                <a href="#" className="flex items-center gap-2 h-7 px-3 border border-white border-opacity-[0.12] dark:border-opacity-[0.12] rounded-lg text-stone-400">
                     <span className="text-xs leading-3">Visit My Blog</span>
                     <span>
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
