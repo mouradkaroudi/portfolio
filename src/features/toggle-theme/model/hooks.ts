@@ -4,8 +4,12 @@ import { themeType } from "./types";
 
 export const useTheme = () => {
     const [theme, setTheme] = useState<themeType>(() => {
-        const savedTheme = localStorage.getItem('theme');
-        return savedTheme ? (savedTheme as themeType) : defaultTheme;
+        // Check if window is defined to ensure we're in a browser environment
+        if (typeof window !== 'undefined') {
+            const savedTheme = localStorage.getItem('theme');
+            return savedTheme ? (savedTheme as themeType) : defaultTheme;
+        }
+        return defaultTheme; // Fallback to defaultTheme if not in a browser
     });
 
     const toggleTheme = () => {
